@@ -3,7 +3,7 @@ import { argv } from "bun";
 import type { Folios, ShipmentData } from "./interface/services.interface";
 import { CreateFolios } from "./estafetaAPI/folios";
 
-const orderNumber = argv[2]
+const orderNumber = argv[3]
 
 const addFoliosOrders = async () => {
   console.log("Buscando orden")
@@ -57,5 +57,16 @@ const generatorFolios = async () => {
   }
 }
 
+const selectOption = () => {
+  const option = parseInt(argv[2])
+  switch (option){
+    case 1: 
+      addFoliosOrders()
+    break;
+    case 2:
+      generatorFolios()
+    break
+  }
+}
 
-generatorFolios()
+selectOption()
