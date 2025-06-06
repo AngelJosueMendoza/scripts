@@ -4,9 +4,10 @@ import type { Folios, ShipmentData } from "./interface/services.interface";
 import { CreateFolios } from "./estafetaAPI/folios";
 import { generatorFolios } from "./actions/generatorFolios";
 import { readXlsxFile, updatedCustomUserByGuides } from "./actions/customersCountGuides";
-import { deleteOrdersByUser, deleteOrderTypeBundleEmptys } from "./actions/orders";
+import { deleteOrderById, deleteOrdersByUser, deleteOrdersCustom, deleteOrdersTypeCombo, deleteOrderTypeBundleEmptys } from "./actions/orders";
 import { read } from "fs";
 import path from "path";
+import { updateUserGuides } from "./actions/users";
 
 const orderNumber = argv[3]
 
@@ -131,9 +132,9 @@ const updatedUsers = async () => {
   const filePath = path.resolve(file);
   const readFile = await readXlsxFile(filePath)  
   for(const customers of readFile){
-    console.log(customers["Blikgel@gmail.com"])
-    await deleteOrderTypeBundleEmptys(customers["Blikgel@gmail.com"])
+    console.log(customers["179aab26-c89d-4fcc-949e-80ac540872d4"])
+    //await deleteOrderById(customers["179aab26-c89d-4fcc-949e-80ac540872d4"])
   }
 }
 
-updatedUsers()
+updateUserGuides()
