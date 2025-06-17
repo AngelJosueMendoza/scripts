@@ -170,4 +170,5 @@ const updatedUsers = async () => {
   }
 };
 
+console.log("hOLA");
 updatedCustomUserByGuides("mala_aline@hotmail.com");
