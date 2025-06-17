@@ -1,4 +1,4 @@
-interface Guide {
+export interface Guide {
   guide: string;
   trackingCode: string;
   QR: string;
@@ -24,4 +24,4 @@ export interface Folios {
 }
 
 export type ShipmentData = Record<string, ShipmentItem>;
-export type FolioData = Record<string, Folios>
+export type FolioData = Record<string, Folios>;
