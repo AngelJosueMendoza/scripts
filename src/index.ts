@@ -166,12 +166,6 @@ const updatedUsers = async () => {
   for (const customers of readFile) {
     //console.log(customers["mordoneza@amda.mx"])
     //await updatedCustomUserByGuides(customers["mordoneza@amda.mx"])
-    //@ts-ignore
-    console.log(customers["179aab26-c89d-4fcc-949e-80ac540872d4"]);
-    //@ts-ignore
-    console.log(customers["179aab26-c89d-4fcc-949e-80ac540872d4"]);
-    //@ts-ignore
-    console.log(customers["179aab26-c89d-4fcc-949e-80ac540872d4"]);
     //await deleteOrderById(customers["179aab26-c89d-4fcc-949e-80ac540872d4"])
   }
 };
