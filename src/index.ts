@@ -16,8 +16,8 @@ import {
 } from "./actions/orders";
 import { read } from "fs";
 import path from "path";
-import { updateUserGuides } from "./actions/users";
 import { backGuidesRecolections } from "./actions/recolections";
+import { getGuidesByUser, updateUserGuides } from "./actions/users";
 
 const orderNumber = argv[3];
 
@@ -166,6 +166,7 @@ const updatedUsers = async () => {
   for (const customers of readFile) {
     //console.log(customers["mordoneza@amda.mx"])
     //await updatedCustomUserByGuides(customers["mordoneza@amda.mx"])
+    console.log(customers["179aab26-c89d-4fcc-949e-80ac540872d4"]);
     //await deleteOrderById(customers["179aab26-c89d-4fcc-949e-80ac540872d4"])
   }
 };
